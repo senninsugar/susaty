@@ -1,4 +1,7 @@
-import { createRouter } from "vue-router";
+import {
+createRouter,
+createWebHistory
+} from "vue-router";
 
 import Home from "../pages/Home.vue";
 import Login from "../pages/Login.vue";
@@ -7,7 +10,9 @@ import Profile from "../pages/Profile.vue";
 import Search from "../pages/Search.vue";
 import Notifications from "../pages/Notifications.vue";
 
-const routes = [
+const router = createRouter({
+history: createWebHistory(),
+routes: [
 {
 path: "/",
 component: Home
@@ -32,16 +37,7 @@ component: Search
 path: "/notifications",
 component: Notifications
 }
-];
-
-export default createRouter({
-history:
-createWebHistory(),
-routes
+]
 });
 
-function createWebHistory() {
-return (
-await import("vue-router")
-).createWebHistory();
-}
+export default router;
