@@ -1,0 +1,29 @@
+{
+"name": "sasuty",
+"version": "1.0.0",
+"description": "Sasuty SNS",
+"main": "server.js",
+"type": "module",
+"scripts": {
+"start": "node server.js",
+"dev": "node server.js",
+"build": "cd frontend && npm install && npm run build"
+},
+"keywords": [
+"sns",
+"vue",
+"turso",
+"socketio",
+"sasuty"
+],
+"author": "",
+"license": "MIT",
+"dependencies": {
+"@libsql/client": "^0.15.0",
+"cors": "^2.8.5",
+"dotenv": "^16.4.7",
+"express": "^5.1.0",
+"socket.io": "^4.8.1",
+"uuid": "^11.1.0"
+}
+}
